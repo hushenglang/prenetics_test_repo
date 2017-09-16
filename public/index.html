@@ -7,7 +7,7 @@
     <!--<link href="app-content/app.css" rel="stylesheet" />-->
 </head>
 <body>
-<div class="jumbotron">
+<div>
     <div class="container">
         <div class="col-sm-8 col-sm-offset-2">
             <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
@@ -15,14 +15,7 @@
         </div>
     </div>
 </div>
-<div class="credits text-center">
-    <p>
-        <a href="http://jasonwatmore.com/post/2015/03/10/angularjs-user-registration-and-login-example-tutorial">AngularJS User Registration and Login Example</a>
-    </p>
-    <p>
-        <a href="http://jasonwatmore.com">JasonWatmore.com</a>
-    </p>
-</div>
+
 
 <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="//code.angularjs.org/1.6.0/angular.min.js"></script>
@@ -37,11 +30,9 @@
 <script src="js/service/user.service.js"></script>
 <script src="js/service/authInterceptor.service.js"></script>
 
-<!-- Fake user service for demo that uses local storage -->
-<!--<script src="js/service/user.service.local-storage.js"></script>-->
 
 <script src="js/controller/home.controller.js"></script>
 <script src="js/controller/login.controller.js"></script>
-<!--<script src="register/register.controller.js"></script>-->
+
 </body>
 </html>

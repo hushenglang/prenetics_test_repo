@@ -7,7 +7,7 @@
 'use strict';
 
 const jwt    = require('jsonwebtoken');
-const restResultUtil = require('../util/RestResultUtil');
+const restResultUtil = require('../util/restResultUtil');
 const CONST = require('../util/const');
 const log4js = require('log4js');
 const log = log4js.getLogger("router");

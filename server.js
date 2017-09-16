@@ -14,7 +14,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const log4js = require('log4js');
 
-const restResultUtil = require('./server/util/RestResultUtil');
+const restResultUtil = require('./server/util/restResultUtil');
 const config = require("./config");
 
 
