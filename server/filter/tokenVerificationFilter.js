@@ -17,9 +17,15 @@ const log = log4js.getLogger("router");
   */
 function tokenVerify(req, res, next) {
     // check header or url parameters or post parameters for token
-    var token = req.body.token || req.query.token || req.headers['x-access-token'] || req.headers['authorization'];
+    var token = req.body.token || req.query.token || req.headers['x-access-token'] || req.headers['Authorization'] || req.headers['authorization'];
     // decode token
     if (token) {
+        // remove bearer string if existed;
+        var bearerString = "Bearer ";
+        if (token.indexOf(bearerString) != -1) {
+            token = token.replace(/Bearer\s+/g, '');
+            token = token.replace(/\"/g, '');
+        }
         // verifies secret and checks exp
         jwt.verify(token, CONST.JWT_SECRAT, function(err, user) {
             if (err) {
