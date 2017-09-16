@@ -30,7 +30,8 @@ router.post('/login', function(req, res, next){
     //1. validate is email & password is not null;
     if(!email || !password){
         log.warn("email & password is not provided!");
-        res.json(restResultUtil.createFailResult("account validation fail!"));
+        res.json(restResultUtil.createFailResult("email & password is not provided!"));
+        return;
     }
 
     //2. get user object by email
