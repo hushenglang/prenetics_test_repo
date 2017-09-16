@@ -1,0 +1,11 @@
+{
+  "mysql":{
+    "url": "prenetics.c0a606cyly1w.us-west-1.rds.amazonaws.com",
+    "port": 3306,
+    "username": "prenetics",
+    "password": "prenetics",
+    "database": "prenetics",
+    "maxConnections": 10
+  },
+  "jwtSecret": "12345678"
+}

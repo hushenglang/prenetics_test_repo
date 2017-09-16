@@ -1,0 +1,23 @@
+{
+  "name": "prenetics",
+  "version": "1.0.0",
+  "description": "prenetic assignment",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "joehu",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "jsonwebtoken": "^7.4.3",
+    "log4js": "^1.1.1",
+    "mysql": "^2.14.1",
+    "promise-mysql": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
