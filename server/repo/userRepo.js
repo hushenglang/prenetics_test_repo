@@ -15,7 +15,9 @@ const log = log4js.getLogger("userRepo");
  */
 exports.findByEmail = function(email){
     log.debug("find user by email:", email);
-    return dbPool.query("select * from user").then(function(rows){
-        return rows.length>0?rows[0]:null;
-    });
+    return dbPool.query("SELECT id, email, first_name, last_name, password, salt, date_birth, policy_code, create_date, " +
+        "update_date FROM user WHERE email=?", [email])
+        .then(function(rows){
+            return rows.length>0?rows[0]:null;
+        });
 }

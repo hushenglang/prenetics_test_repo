@@ -17,7 +17,6 @@ const restResultUtil = require('../util/RestResultUtil');
 const log4js = require('log4js');
 const log = log4js.getLogger("authentication");
 
-
 /**
  * user login
  * @param email
@@ -32,7 +31,7 @@ router.post('/login', function(req, res, next){
         .then(function(user){
             if (email&&password == user.password){
                 log.debug("account validation success!");
-                var token = jwt.sign({'email':email}, CONST.JWT_SECRAT, {expiresIn: CONST.JWT_EXPIRE_TIME});
+                var token = jwt.sign({'email':email, "id":user.id}, CONST.JWT_SECRAT, {expiresIn: CONST.JWT_EXPIRE_TIME});
                 res.json(restResultUtil.createSuccessResult(token));
             }else{
                 log.debug("account validation fail!");

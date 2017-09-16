@@ -12,15 +12,14 @@ const CONST = require('../util/const');
 const log4js = require('log4js');
 const log = log4js.getLogger("router");
 
-// route middleware to verify a token
+/**
+ * route middleware to verify a token
+  */
 function tokenVerify(req, res, next) {
-
     // check header or url parameters or post parameters for token
     var token = req.body.token || req.query.token || req.headers['x-access-token'] || req.headers['authorization'];
-
     // decode token
     if (token) {
-
         // verifies secret and checks exp
         jwt.verify(token, CONST.JWT_SECRAT, function(err, user) {
             if (err) {
@@ -28,7 +27,7 @@ function tokenVerify(req, res, next) {
                 return res.json(restResultUtil.createFailResult('Failed to authenticate token.'));
             } else {
                 // if everything is good, save to request for use in other route
-                req.user = user;
+                req._user = user;
                 next();
             }
         });
@@ -37,7 +36,6 @@ function tokenVerify(req, res, next) {
         // return an error
         log.error('No token provided.');
         return res.status(403).send(restResultUtil.createFailResult('Token is not provided!'));
-
     }
 };
 

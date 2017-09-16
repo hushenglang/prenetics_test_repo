@@ -6,7 +6,6 @@
 
 'use strict';
 
-// const CONST = require('./util/const');
 const tokenVerificationFilter = require('./filter/tokenVerificationFilter');
 const log4js = require('log4js');
 const log = log4js.getLogger("router");
