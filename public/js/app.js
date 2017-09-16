@@ -1,32 +1,14 @@
 'use strict';
 
-angular.module('prenetics', ['ngRoute', 'ngCookies'])
-    .config(config)
-    .run(run);
+var app = angular.module('prenetics', ['ngRoute', 'ngCookies']);
 
-//config routes
-config.$inject = ['$routeProvider'];
-function config($routeProvider) {
-    $routeProvider
-        .when('/home', {
-            controller: 'HomeController',
-            templateUrl: 'view/home.view.html',
-            // controllerAs: 'vm'
-        })
+// interceptor config
+app.config(['$httpProvider', function($httpProvider){
+        $httpProvider.interceptors.push("AuthInterceptorService");
+    }]);
 
-        .when('/login', {
-            controller: 'LoginController',
-            templateUrl: 'view/login.view.html',
-            // controllerAs: 'vm'
-        })
-
-        .otherwise({ redirectTo: '/login' });
-}
-
-//set listener and other setting;
-run.$inject = ['$rootScope', '$location', '$http'];
-function run($rootScope, $location, $http){
-
+//set listener and others
+app.run(['$rootScope', '$location', '$http', function($rootScope, $location, $http){
     var token = sessionStorage.getItem("AuthToken");
     if(token) {
         // add jwt token to auth header for all requests made by the $http service
@@ -38,4 +20,5 @@ function run($rootScope, $location, $http){
             $location.path('/login');
         }
     });
-}
+}]);
+

@@ -30,7 +30,7 @@ function tokenVerify(req, res, next) {
         jwt.verify(token, CONST.JWT_SECRAT, function(err, user) {
             if (err) {
                 log.error('Failed to authenticate token.');
-                return res.json(restResultUtil.createFailResult('Failed to authenticate token.'));
+                return res.status(403).json(restResultUtil.createFailResult('Failed to authenticate token.'));
             } else {
                 // if everything is good, save to request for use in other route
                 req._user = user;
@@ -41,7 +41,7 @@ function tokenVerify(req, res, next) {
         // if there is no token
         // return an error
         log.error('No token provided.');
-        return res.status(403).send(restResultUtil.createFailResult('Token is not provided!'));
+        return res.status(403).json(restResultUtil.createFailResult('Token is not provided!'));
     }
 };
 
