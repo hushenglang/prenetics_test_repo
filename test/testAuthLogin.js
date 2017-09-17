@@ -6,15 +6,10 @@
 
 'use strict';
 
-var supertest = require('supertest');
+var request = require('./testBase').requestHelp;
 const expect = require('chai').expect;
 
-
-var app = require('../server.js');
-var request=supertest(app);
-
 describe("Authentication Testing", function() {
-
     describe("Login Testing", function(){
         const loginApi = "/auth/login";
 
@@ -32,12 +27,13 @@ describe("Authentication Testing", function() {
                     expect(response.body.success).eql(true);
                 })
                 .end(function(err, res) {
+                    request.authToken = res.body.data;
                     done(err);
                 });
 
         });
 
-        it("Login fail, return success false", function(done){
+        it("Login fail, return success flag false", function(done){
             const email = "xxxxxx@gmail.com";
             const password = "123456";
             request.post(loginApi)
