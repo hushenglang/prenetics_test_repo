@@ -1,6 +1,6 @@
 Dependencies:
-• Node.js v6.x 
-• Git
+* Node.js v6.x 
+* Git
 
 Technologies:
 • [Backend] Node.js + Express + JWT + Redis + Mysql 
