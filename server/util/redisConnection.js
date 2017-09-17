@@ -16,7 +16,7 @@ log.info("Start connecting Redis...");
 
 bluebird.promisifyAll(redis.RedisClient.prototype);
 
-var redisClient = redis.createClient({host : config.redis.url, port : config.redis.port, expire: 1});
+var redisClient = redis.createClient({host : config.redis.url, port : config.redis.port});
 redisClient.on('ready',function() {
     log.info("Redis is ready...");
 });

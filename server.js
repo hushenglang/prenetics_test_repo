@@ -56,5 +56,5 @@ const options = {
     rejectUnauthorized: false
 };
 var server = https.createServer(options, app).listen(config.port.https, function(){
-    console.log("https server listening on port ", config.port.https);
+    log.info("https server listening on port ", config.port.https);
 });

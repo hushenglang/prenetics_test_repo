@@ -47,7 +47,7 @@ router.get('/profile', function(req, res, next){
 });
 
 /**
- * get user genetic results
+ * get user genetic results without redis cache
  */
 router.get('/genetic_results', function(req, res, next){
     log.info("get user genetic result by user_id:", req._user.id);
