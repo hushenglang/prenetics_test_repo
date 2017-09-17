@@ -23,18 +23,23 @@ function AuthenticationService($http, HttpRequestService) {
     //clear token from session storage;
     var clearAuthToken = function(){
         sessionStorage.removeItem("AuthToken");
+        $http.defaults.headers.common.Authorization = '';
     };
+
+    var isAuth = function(){
+        return sessionStorage.getItem("AuthToken")!=null;
+    }
 
     //logout
     var logout = function() {
-        console.log("logout");
         clearAuthToken();
-        $http.defaults.headers.common.Authorization = ''
     };
 
+    //return service obj;
     return {
         "login": login,
         "clearAuthToken": clearAuthToken,
+        "isAuth": isAuth,
         "logout": logout
     };
 }
