@@ -6,7 +6,7 @@
 
 'use strict';
 
-var app = angular.module('prenetics', ['ngRoute']);
+var app = angular.module('prenetics', ['ngRoute', 'ui.bootstrap']);
 
 // interceptor config
 app.config(['$httpProvider', function($httpProvider){
