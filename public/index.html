@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Prenetics</title>
+    <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
     <link href="css/app.css" rel="stylesheet" />
 </head>
@@ -11,6 +12,10 @@
 <!-- define view structure -->
 <div>
     <div class="container">
+        <div class ="col-sm-12">
+            <img class="logo" src="images/logo.png">
+            
+        </div>
         <div class="col-sm-8 col-sm-offset-2">
             <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
             <div ng-view></div>

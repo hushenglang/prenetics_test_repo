@@ -7,3 +7,12 @@
 a {
     cursor: pointer;
 }
+
+.logo {
+    width: 230px;
+    margin-top: 10px;
+}
+
+.logout {
+    margin-top: 23px;
+}

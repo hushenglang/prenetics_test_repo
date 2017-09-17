@@ -1,29 +1,29 @@
-<a type="button" ng-click="logout()">logout</a>
 <div class="col-md-6 col-md-offset-3">
-    <h2 class="col-md-6">Profile</h2>
+    <h2 class="col-md-8">Profile</h2>
+    <a class="col-md-4 logout" type="button" ng-click="logout()">logout</a>
 
-        <div class="col-md-12">
-            <label class="col-md-4" for="firstName">FirstName: </label>
-            <span class="col-md-6">{{profile.first_name}}</span>
-        </div>
-        <div class="col-md-12">
-            <label class="col-md-4" for="lastName">LastName: </label>
-            <span class="col-md-6">{{profile.last_name}}</span>
-        </div>
+    <div class="col-md-12">
+        <label class="col-md-4" for="firstName">FirstName: </label>
+        <span class="col-md-6">{{profile.first_name}}</span>
+    </div>
+    <div class="col-md-12">
+        <label class="col-md-4" for="lastName">LastName: </label>
+        <span class="col-md-6">{{profile.last_name}}</span>
+    </div>
 
-        <div class="col-md-12">
-            <label class="col-md-4" for="email">Email: </label>
-            <span class="col-md-6">{{profile.email}}</span>
-        </div>
+    <div class="col-md-12">
+        <label class="col-md-4" for="email">Email: </label>
+        <span class="col-md-6">{{profile.email}}</span>
+    </div>
 
-        <div class="col-md-12">
-            <label class="col-md-4" for="dateBirth">BirthDate: </label>
-            <span class="col-md-6">{{profile.date_birth | date:"MMMM/dd/yyyy"}}</span>
-        </div>
+    <div class="col-md-12">
+        <label class="col-md-4" for="dateBirth">BirthDate: </label>
+        <span class="col-md-6">{{profile.date_birth | date:"MMMM/dd/yyyy"}}</span>
+    </div>
 
-        <div class="col-md-12">
-            <label class="col-md-4" for="policyCode">PolicyCode: </label>
-            <span class="col-md-6">{{profile.policy_code}}</span>
-        </div>
+    <div class="col-md-12">
+        <label class="col-md-4" for="policyCode">PolicyCode: </label>
+        <span class="col-md-6">{{profile.policy_code}}</span>
+    </div>
 
 </div>
