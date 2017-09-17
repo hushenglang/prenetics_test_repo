@@ -13,7 +13,7 @@ The following 4 steps will make you setup the application. Since Mysql DB and Re
 2. cd prenetics_test_repo
 3. npm install
 4. node server
-(Note: Mysql init sql script is in here)
+(Note: Mysql init sql script is in here, and npm test is to run test)
 
 **Application Web URL:**
 There are 2 entry point, one is HTTP, the other is HTTPS. 
