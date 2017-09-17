@@ -11,7 +11,7 @@
     "url": "ec2-54-153-19-155.us-west-1.compute.amazonaws.com",
     "port": 6379
   },
-  "jwtSecret": "12345678",
+  "jwtSecret": "oYJHykSEA2WN1hOWveA8aOOBHGqfB3pj8cVrJDDdl/XbKXovvhq0+A7v3GIkERsOj+45dz5DxffiJnFM64oS4BBBq0mgPq9BwtxLdU9+0DFddHyD2Zo2j4Mi5uBmFD+r7feiNTnxkqg0TRTkaYuszDWzNUqbTVdJNZ1UxHp4p5g=",
   "port":{
     "http":8080,
     "https":8443
