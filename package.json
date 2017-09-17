@@ -10,13 +10,15 @@
   "author": "joehu",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "body-parser": "^1.18.1",
     "express": "^4.15.4",
     "jsonwebtoken": "^7.4.3",
     "log4js": "^1.1.1",
     "mysql": "^2.14.1",
     "password-hash": "^1.2.2",
-    "promise-mysql": "^3.0.2"
+    "promise-mysql": "^3.0.2",
+    "redis": "^2.8.0"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"

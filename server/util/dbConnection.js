@@ -8,6 +8,8 @@
 
 const mysql = require('promise-mysql');
 const config = require("../../config");
+const log4js = require('log4js');
+const log = log4js.getLogger("dbConnection");
 
 const pool = mysql.createPool({
     host: config.mysql.url,
@@ -16,5 +18,5 @@ const pool = mysql.createPool({
     database: config.mysql.database,
     connectionLimit: config.mysql.maxConnections
 });
-
+log.info("start mysql connection...");
 exports.pool = pool;
