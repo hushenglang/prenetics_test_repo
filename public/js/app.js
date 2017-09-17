@@ -6,7 +6,7 @@
 
 'use strict';
 
-var app = angular.module('prenetics', ['ngRoute', 'ngCookies']);
+var app = angular.module('prenetics', ['ngRoute']);
 
 // interceptor config
 app.config(['$httpProvider', function($httpProvider){
