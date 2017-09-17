@@ -58,3 +58,6 @@ const options = {
 var server = https.createServer(options, app).listen(config.port.https, function(){
     log.info("https server listening on port ", config.port.https);
 });
+
+//export app for mocha testing.
+module.exports = app;
