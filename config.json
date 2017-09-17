@@ -7,5 +7,9 @@
     "database": "prenetics",
     "maxConnections": 10
   },
-  "jwtSecret": "12345678"
+  "jwtSecret": "12345678",
+  "port":{
+    "http":8080,
+    "https":8443
+  }
 }
