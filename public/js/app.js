@@ -1,3 +1,9 @@
+/**
+ * angular app entry point file, config angular app.
+ * @author JoeHu
+ * @date 2017-Sep-16
+ */
+
 'use strict';
 
 var app = angular.module('prenetics', ['ngRoute', 'ngCookies']);

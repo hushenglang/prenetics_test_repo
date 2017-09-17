@@ -1,15 +1,16 @@
-'use strict';
-
-
 /**
  * This service provides a way to communicate with the server for retrieving and storing data
- * @param {angular.$http} $http
- * @param {angular.$q} $q
- * @param {angular.$rootScope} $rootScope
- * @constructor
+ * @author JoeHu
+ * @date 2017-Sep-16
  */
-function HttpRequestService($http, $q, $rootScope) {
-    // var servicePrefix = $rootScope.servicePrefix;
+
+'use strict';
+
+angular
+    .module('prenetics')
+    .factory('HttpRequestService', ['$http', '$q', '$rootScope', HttpRequestService]);
+
+function HttpRequestService($http, $q) {
 
     return {
         makePromise: function (context) {
@@ -49,8 +50,4 @@ function HttpRequestService($http, $q, $rootScope) {
     }
 }
 
-
-angular
-    .module('prenetics')
-    .factory('HttpRequestService', ['$http', '$q', '$rootScope', HttpRequestService]);
 

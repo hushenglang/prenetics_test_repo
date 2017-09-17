@@ -1,3 +1,10 @@
+/**
+ * login controller
+ * view: view/login.view.html
+ * @author JoeHu
+ * @date 2017-Sep-16
+ */
+
 'use strict';
 
 angular

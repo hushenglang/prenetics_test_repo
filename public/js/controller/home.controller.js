@@ -1,4 +1,11 @@
-﻿'use strict';
+﻿/**
+ * home controller
+ * view: view/home.view.html
+ * @author JoeHu
+ * @date 2017-Sep-16
+ */
+
+'use strict';
 
 angular
     .module('prenetics')

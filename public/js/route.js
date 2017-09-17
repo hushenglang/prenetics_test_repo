@@ -1,3 +1,11 @@
+/**
+ * Defining angular routes
+ * @author JoeHu
+ * @date 2017-Sep-16
+ */
+
+'use strict';
+
 angular.module('prenetics')
     .config(routeConfig)
 
@@ -8,13 +16,11 @@ function routeConfig($routeProvider) {
         .when('/home', {
             controller: 'HomeController',
             templateUrl: 'view/home.view.html',
-            // controllerAs: 'vm'
         })
 
         .when('/login', {
             controller: 'LoginController',
             templateUrl: 'view/login.view.html',
-            // controllerAs: 'vm'
         })
 
         .otherwise({ redirectTo: '/login' });

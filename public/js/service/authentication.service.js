@@ -1,4 +1,10 @@
-﻿'use strict';
+﻿/**
+ * Providing login, logout related service.
+ * @author JoeHu
+ * @date 2017-Sep-16
+ */
+
+'use strict';
 
 angular
     .module('prenetics')
