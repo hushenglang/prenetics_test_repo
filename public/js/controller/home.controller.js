@@ -31,22 +31,27 @@ function HomeController($scope, $location, $uibModal, UserService, Authenticatio
     }
 
     function displayGeneticResult(){
-
-        $uibModal.open({
+        var modalInstance = $uibModal.open({
             animation: $scope.animationsEnabled,
             ariaLabelledBy: 'modal-title-top',
             ariaDescribedBy: 'modal-body-top',
             templateUrl: 'view/genetic.result.modal.view.html',
-            size: 'sm',
+            size: 'md',
             controller: function($scope, $uibModalInstance) {
-                $scope.name = 'top';
+
+                UserService.getUserGeneticResult()
+                    .then(function(results){
+                        $scope.geneticResult = angular.fromJson(results[0].genetic_result);
+                        $scope.create_date = results[0].create_date;
+                    });
 
                 $scope.cancel = function () {
                     $uibModalInstance.close(false);
                 };
             }
         });
-
+        //below code is to avoid unhandle injection, not functional.
+        modalInstance.result.then(function(){}, function(res){});
     }
 
     function logout(){

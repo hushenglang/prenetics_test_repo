@@ -16,3 +16,7 @@ a {
 .logout {
     margin-top: 23px;
 }
+
+.modal-footer{
+    border-top: none;
+}
