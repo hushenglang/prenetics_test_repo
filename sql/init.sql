@@ -7,7 +7,7 @@
 #
 # Host: prenetics.c0a606cyly1w.us-west-1.rds.amazonaws.com (MySQL 5.7.16-log)
 # Database: prenetics
-# Generation Time: 2017-09-16 23:32:59 +0000
+# Generation Time: 2017-09-17 08:22:12 +0000
 # ************************************************************
 
 
@@ -71,8 +71,8 @@ LOCK TABLES `user_genetic` WRITE;
 
 INSERT INTO `user_genetic` (`id`, `user_id`, `genetic_result`, `create_date`, `update_date`)
 VALUES
-	(1,1,X'7B22636F6C31223A2022676F6F6420636F6E646974696F6E222C2022636F6C32223A20226D6F72652073706F727473222C2022636F6C33223A2022676F6F642064696574227D','2017-09-16 08:43:04','2017-09-16 23:32:03'),
-	(2,2,X'7B22636F6C31223A20226265737420636F6E646974696F6E222C2022636F6C32223A20226B6565702073706F727473222C2022636F6C33223A2022626573742064696574227D','2017-09-16 08:43:05','2017-09-16 23:32:23');
+	(1,1,'{"result": "Good condition", "suggestion": "Keep diet and sports", "tester_age": "31", "create_date": "2017/09/17", "tester_name": "JoeHu", "issue_organization": "Prenetics"}','2017-09-16 08:43:04','2017-09-17 03:06:33'),
+	(2,2,'{"result": "Best condition", "suggestion": "More sports", "tester_age": "50", "create_date": "2017/08/17", "tester_name": "JackMa", "issue_organization": "Prenetics"}','2017-09-16 08:43:05','2017-09-17 03:06:45');
 
 /*!40000 ALTER TABLE `user_genetic` ENABLE KEYS */;
 UNLOCK TABLES;
